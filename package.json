@@ -6,12 +6,13 @@
   "author": "Federico Fissore <federico@fissore.org>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ffissore/presentz.js.git"
+    "url": "git://github.com/Edools/presentz.js.git"
   },
   "devDependencies": {
     "uglify-js": "",
     "mocha": "",
-    "coffee-script": ""
+    "coffee-script": "",
+    "mediaelement" : ""
   },
   "scripts": {
     "test": "node_modules/mocha/bin/mocha --compilers coffee:coffee-script --reporter spec",
