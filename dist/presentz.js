@@ -60,8 +60,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         }
       } else {
         setTimeout(function(){
-            callback();
-          }, 1000);
+          callback();
+        }, 1000);
       }
     };
 
