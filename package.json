@@ -2,7 +2,7 @@
   "name": "edools-presentz",
   "description": "A web library to show synchronized video + slides presentations",
   "keywords": ["presentation", "slide", "video", "synchronization"],
-  "version": "1.2.2",
+  "version": "1.1.9",
   "author": "Federico Fissore <federico@fissore.org>",
   "repository": {
     "type": "git",

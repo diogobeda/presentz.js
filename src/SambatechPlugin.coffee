@@ -28,7 +28,7 @@ class SambatechPlugin
         firstScriptTag = $scripts[0]
         firstScriptTag.parentNode.insertBefore(script, firstScriptTag)
     else
-      callback()
+      setTimeout callback(), 1000
     return
 
   changeVideo: (videoData, @wouldPlay) ->
