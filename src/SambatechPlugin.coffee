@@ -14,7 +14,7 @@ class SambatechPlugin
   # Ensure the Sambatech IFrame API is loaded
   ensureSambatechIframeAPILoaded: (callback) ->
 #    <script ="player" name="samba-player-api" type="text/javascript" src=""></script>
-    if jQuery("script[src=\"#{IFRAME_API}\"]").length is 0
+    # if jQuery("script[src=\"#{IFRAME_API}\"]").length is 0
       script = document.createElement("script")
       script.type = "text/javascript"
       script.setAttribute("samba-player-api", "player")
@@ -27,8 +27,8 @@ class SambatechPlugin
       else
         firstScriptTag = $scripts[0]
         firstScriptTag.parentNode.insertBefore(script, firstScriptTag)
-    else
-      setTimeout callback(), 1000
+    # else
+      # setTimeout callback(), 1000
     return
 
   changeVideo: (videoData, @wouldPlay) ->
