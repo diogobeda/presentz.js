@@ -59,9 +59,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
         }
       } else {
-        setTimeout(function(){
-            callback()
-          }, 100);
+        setTimeout(callback(), 1000);
       }
     };
 
