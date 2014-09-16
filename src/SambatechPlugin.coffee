@@ -3,7 +3,7 @@
 # Sambatech video plugin handles Sambatech integration
 class SambatechPlugin
 
-  IFRAME_API = "http://player.sambatech.com.br/v2current/samba.player.api.js/media/js/api/samba.player.api.parent.js"
+  IFRAME_API = "https://player.sambatech.com.br/v2current/samba.player.api.js/media/js/api/samba.player.api.parent.js"
   constructor: (@presentz, @videoContainer, @width, @height) ->
 
   # Creates a new instance of the Sambatech video plugin
@@ -59,7 +59,7 @@ class SambatechPlugin
   videoId: (videoData) ->
     lowercaseUrl = videoData.url.toLowerCase()
     id = videoData.url
-    if lowercaseUrl.indexOf("http://player.sambatech.com.br/current/samba-player.js") isnt -1
+    if lowercaseUrl.indexOf("https://player.sambatech.com.br/current/samba-player.js") isnt -1
       id = id.substr(id.indexOf("m=") + 2)
       id = id.substr(0, id.indexOf("&")) if id.indexOf("&") isnt -1
     id
@@ -68,7 +68,7 @@ class SambatechPlugin
   playerKey: (videoData) ->
     lowercaseUrl = videoData.url.toLowerCase()
     id = videoData.url
-    if lowercaseUrl.indexOf("http://player.sambatech.com.br/current/samba-player.js") isnt -1
+    if lowercaseUrl.indexOf("https://player.sambatech.com.br/current/samba-player.js") isnt -1
       id = id.substr(id.indexOf("ph=") + 3)
       id = id.substr(0, id.indexOf("&")) if id.indexOf("&") isnt -1
     id
@@ -81,7 +81,7 @@ class SambatechPlugin
   # Called by presentz when looking up a proper video plugin
   handle: (video) ->
     lowerCaseUrl = video.url.toLowerCase()
-    lowerCaseUrl.indexOf("http://player.sambatech.com.br/current/samba-player.js") isnt -1
+    lowerCaseUrl.indexOf("https://player.sambatech.com.br/current/samba-player.js") isnt -1
 
   # Gets the current time of the played video
   currentTime: () ->

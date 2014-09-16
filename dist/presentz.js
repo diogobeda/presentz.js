@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   SambatechPlugin = (function() {
     var IFRAME_API;
 
-    IFRAME_API = "http://player.sambatech.com.br/v2current/samba.player.api.js/media/js/api/samba.player.api.parent.js";
+    IFRAME_API = "https://player.sambatech.com.br/v2current/samba.player.api.js/media/js/api/samba.player.api.parent.js";
 
     function SambatechPlugin(presentz, videoContainer, width, height) {
       this.presentz = presentz;
@@ -87,7 +87,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       var id, lowercaseUrl;
       lowercaseUrl = videoData.url.toLowerCase();
       id = videoData.url;
-      if (lowercaseUrl.indexOf("http://player.sambatech.com.br/current/samba-player.js") !== -1) {
+      if (lowercaseUrl.indexOf("https://player.sambatech.com.br/current/samba-player.js") !== -1) {
         id = id.substr(id.indexOf("m=") + 2);
         if (id.indexOf("&") !== -1) {
           id = id.substr(0, id.indexOf("&"));
@@ -100,7 +100,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       var id, lowercaseUrl;
       lowercaseUrl = videoData.url.toLowerCase();
       id = videoData.url;
-      if (lowercaseUrl.indexOf("http://player.sambatech.com.br/current/samba-player.js") !== -1) {
+      if (lowercaseUrl.indexOf("https://player.sambatech.com.br/current/samba-player.js") !== -1) {
         id = id.substr(id.indexOf("ph=") + 3);
         if (id.indexOf("&") !== -1) {
           id = id.substr(0, id.indexOf("&"));
@@ -116,7 +116,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     SambatechPlugin.prototype.handle = function(video) {
       var lowerCaseUrl;
       lowerCaseUrl = video.url.toLowerCase();
-      return lowerCaseUrl.indexOf("http://player.sambatech.com.br/current/samba-player.js") !== -1;
+      return lowerCaseUrl.indexOf("https://player.sambatech.com.br/current/samba-player.js") !== -1;
     };
 
     SambatechPlugin.prototype.currentTime = function() {
